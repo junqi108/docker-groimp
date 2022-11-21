@@ -5,6 +5,7 @@ FROM debian:${DEBIAN_TAG}
 RUN apt-get update \ 
     && apt-get install -y --no-install-recommends bash curl coreutils ca-certificates libxi6 \
     libxrender-dev libxtst-dev freeglut3-dev \
+    xorg xserver-xorg-input-evdev  xserver-xorg-input-all \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
